@@ -1,0 +1,3 @@
+/home/amadeus/code/homework/homework1/CMakeFiles/rebuild_cache.dir
+/home/amadeus/code/homework/homework1/CMakeFiles/edit_cache.dir
+/home/amadeus/code/homework/homework1/CMakeFiles/show_image.dir

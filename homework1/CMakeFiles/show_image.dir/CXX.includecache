@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/amadeus/code/homework/homework1/show_a_image.cpp
+iostream
+-
+opencv2/opencv.hpp
+/home/amadeus/code/homework/homework1/opencv2/opencv.hpp
+
