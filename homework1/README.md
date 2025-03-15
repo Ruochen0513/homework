@@ -7,15 +7,15 @@
 
 ### 作业步骤
 #### opencv源代码下载与编译安装
-1.在./homework1/目录下`mkdir opencv-3.4.1`新建文件夹opencv-3.4.1 **(该文件夹在安装opencv之后删除了)**
-2.`cd opencv-3.4.1`进入文件夹
-3.`git init`初始化git仓库
-4.使用`git clone https://github.com/opencv/opencv.git` 下载opencv源代码
-5.使用`git checkout 3.4.1`切换到3.4.1版本
-6.在opencv-3.4.1目录下`mkdir build`新建文件夹build
-7.使用`cmake -S ../ -B build/`编译opencv
-8.使用`make`编译opencv
-9.使用`sudo make install`进行安装，这样opencv将会默认安装路径为
+1.在./homework1/目录下`mkdir opencv-3.4.1`新建文件夹opencv-3.4.1 **(该文件夹在安装opencv之后删除了)**  
+2.`cd opencv-3.4.1`进入文件夹  
+3.`git init`初始化git仓库  
+4.使用`git clone https://github.com/opencv/opencv.git` 下载opencv源代码  
+5.使用`git checkout 3.4.1`切换到3.4.1版本  
+6.在opencv-3.4.1目录下`mkdir build`新建文件夹build  
+7.使用`cmake -S ../ -B build/`编译opencv  
+8.使用`make`编译opencv  
+9.使用`sudo make install`进行安装，这样opencv将会默认安装路径为  
 >/usr/local/bin - executable files
 /usr/local/lib - libraries (.so)
 /usr/local/cmake/opencv4 - cmake package
@@ -37,7 +37,7 @@ int main()
 }
 ```
 #### 使用CMake和make进行编译链接以上程序
-1.`touch CMakeLists.txt`新建一个CMakeLists.txt
+1.`touch CMakeLists.txt`新建一个CMakeLists.txt  
 2.该文档内容如下（注意要记得链接上opencv库）
 ```
 cmake_minimum_required(VERSION 3.16.3)
