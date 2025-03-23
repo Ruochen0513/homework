@@ -1,0 +1,4 @@
+/home/amadeus/code/homework/lesson_work/CMakeFiles/rebuild_cache.dir
+/home/amadeus/code/homework/lesson_work/CMakeFiles/edit_cache.dir
+/home/amadeus/code/homework/lesson_work/CMakeFiles/server.dir
+/home/amadeus/code/homework/lesson_work/CMakeFiles/client.dir
