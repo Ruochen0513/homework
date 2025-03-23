@@ -12,8 +12,8 @@
 3.`git init`初始化git仓库  
 4.使用`git clone https://github.com/opencv/opencv.git` 下载opencv源代码  
 5.使用`git checkout 3.4.1`切换到3.4.1版本  
-6.在opencv-3.4.1目录下`mkdir build`新建文件夹build  
-7.使用`cmake -S ../ -B build/`编译opencv  
+6.在opencv-3.4.1目录下`mkdir build`新建文件夹build
+7.使用`cmake -S ./ -B build/`编译opencv  
 8.使用`make`编译opencv  
 9.使用`sudo make install`进行安装，这样opencv将会默认安装路径为  
 >/usr/local/bin - executable files
