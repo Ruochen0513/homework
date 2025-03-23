@@ -21,6 +21,10 @@ target_link_libraries(server pthread)
 4.在终端输入`cmake -S ./homework2`后继续输入`make`进行编译
 5.在终端中输入`./homework2/server`打开服务器，新建一个终端输入`./homework2/client 127.0.0.1`打开客户端连接服务器
 ### 结果演示
+###### server:
+![alt text](assets/server.png)
+###### client:
+![alt text](assets/client.png)
 ### 核心流程
 - **客户端**：主动发起连接，通过多线程实现收发分离。
 - **服务器**：被动等待连接，接受后启动线程处理通信。
