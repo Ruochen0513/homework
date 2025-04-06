@@ -55,4 +55,4 @@ target_link_libraries(show_image ${OpenCV_LIBS})
 
 #### 程序运行及展示
 终端输入`./show_image`运行程序，结果如下图：
-![alt text](asserts/image1.png)
+![alt text](assets/image1.png)

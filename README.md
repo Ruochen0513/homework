@@ -19,3 +19,14 @@
 - 一个线程负责接收并显示对方发送的消息
 - 另一个线程负责处理本方的输入并发出消息
 #### 具体步骤见[homework2/README.md](homework2/README.md)
+
+------
+
+## Homework 3
+### Requirements
+##### 编写简单的消息发布器与订阅器：
+- 消息有浮点数和字符串两种数据类型组成
+- 消息发布器采用C++编写
+- 消息订阅器采用Python编写
+- 上传发布器和订阅器的代码及说明文档
+#### 具体步骤见[homework3/README.md](homework3/README.md)
