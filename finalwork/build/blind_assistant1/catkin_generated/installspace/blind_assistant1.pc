@@ -1,0 +1,8 @@
+prefix=/home/amadeus/forTurtle/install
+
+Name: blind_assistant1
+Description: Description of blind_assistant1
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

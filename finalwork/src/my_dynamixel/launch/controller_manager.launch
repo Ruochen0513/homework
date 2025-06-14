@@ -1,0 +1,16 @@
+<!-- -*- mode: XML -*- -->
+
+<launch>
+    <node name="dynamixel_manager" pkg="dynamixel_controllers" type="controller_manager.py" required="true" output="screen">
+        <rosparam>
+            namespace: dxl_manager
+            serial_ports:
+                pan_tilt_port:
+                    port_name: "/dev/ttyUSB0"   <!-- 实际端口号 -->
+                    baud_rate: 1000000          <!-- 波特率 -->
+                    min_motor_id: 1             <!-- 最小电机ID -->
+                    max_motor_id: 25            <!-- 最大电机ID -->
+                    update_rate: 20             <!-- 更新率，用于控制器管理器和电机之间的通信频率 -->
+        </rosparam>
+    </node>
+</launch>

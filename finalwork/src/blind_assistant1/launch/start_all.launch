@@ -1,0 +1,69 @@
+<launch>
+    <!-- 盲人引导机器人系统启动文件 - 修复版本 -->
+    
+    <!-- 设置环境变量 -->
+    <env name="VOLC_APP_ID" value="7709498845"/>
+    <env name="VOLC_ACCESS_KEY" value="tiKoWmAWbbi-tIkY81klLAk-evHvOxlL"/>
+    
+    <!-- 启动turtlebot的基础节点 -->
+    <include file="$(find turtlebot_bringup)/launch/minimal.launch" />
+    
+    <!-- 启动amcl定位 -->
+    <include file="$(find turtlebot_navigation)/launch/amcl_demo.launch" />
+    
+    <!-- 核心服务节点（按启动顺序） -->
+    
+    <!-- 1. ASR语音识别服务 -->
+    <node name="asr" pkg="blind_assistant1" type="asr.py" output="screen" 
+          launch-prefix="gnome-terminal --tab --title=语音识别 -e " />
+    
+    <!-- 2. TTS语音合成服务 -->
+    <node name="tts" pkg="blind_assistant1" type="tts.py" output="screen" 
+          launch-prefix="gnome-terminal --tab --title=语音合成 -e " />
+    
+    <!-- 稍等片刻让ASR和TTS服务完全启动 -->
+    <node name="wait_for_services" pkg="blind_assistant1" type="wait_for_services.py" output="screen"/>
+    
+    <!-- 3. 中心控制节点（核心协调者） -->
+    <node name="center_node" pkg="blind_assistant1" type="center_node.py" output="screen" 
+          launch-prefix="gnome-terminal --tab --title=中心节点 -e " />
+    
+    <!-- 功能模块节点 -->
+    
+    <!-- 4. 导航控制器 -->
+    <node name="nav_controller" pkg="blind_assistant1" type="nav_controller.py" output="screen" 
+          launch-prefix="gnome-terminal --tab --title=导航控制 -e "/>
+    
+    <!-- 5. 运动控制器 -->
+    <node name="robot_control" pkg="blind_assistant1" type="robot_control.py" output="screen" 
+          launch-prefix="gnome-terminal --tab --title=运动控制 -e " />
+    
+    <!-- 6. 机械臂控制器 -->
+    <node name="arm_control" pkg="blind_assistant1" type="arm_control.py" output="screen"
+          launch-prefix="gnome-terminal --tab --title=机械臂控制 -e " />
+    
+    <!-- 7. 视频捕获节点 -->
+    <node name="video_cap" pkg="blind_assistant1" type="video_cap.py" output="screen"
+          launch-prefix="gnome-terminal --tab --title=视频捕获 -e " />
+    
+    <!-- 8. 视觉识别节点 -->
+    <node name="visual_recognition" pkg="blind_assistant1" type="visual_recognition.py" output="screen" 
+          launch-prefix="gnome-terminal --tab --title=视觉识别 -e "/>
+    
+    <!-- 9. 导航监控节点 -->
+    <node name="navigation_monitor" pkg="blind_assistant1" type="navigation_monitor.py" output="screen"
+          launch-prefix="gnome-terminal --tab --title=导航监控 -e " />
+
+    <!-- 机械臂相关节点 -->
+    <!-- 机械臂控制器管理器 -->
+    <include file="$(find my_dynamixel)/launch/controller_manager.launch" />
+    <include file="$(find my_dynamixel)/launch/start_tilt_controller.launch" />
+    
+    <!-- 机械臂演示节点 -->
+    <node name="arm_demo" pkg="my_dynamixel" type="arm_demo.py" output="screen"
+          launch-prefix="gnome-terminal --tab --title=机械臂演示 -e " />
+    
+    <!-- 系统信息显示 -->
+    <node name="system_info" pkg="blind_assistant1" type="system_info.py" output="screen" />
+
+</launch>

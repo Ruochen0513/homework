@@ -30,3 +30,15 @@
 - 消息订阅器采用Python编写
 - 上传发布器和订阅器的代码及说明文档
 #### 具体步骤见[homework3/README.md](homework3/README.md)
+
+
+## 课程报告
+### TurtleBot 智能语音助手
+
+本项目是一个基于ROS (Robot Operating System) 的智能语音助手，专为TurtleBot机器人设计，旨在为视障人士提供环境感知、导航和交互辅助。系统集成了火山引擎的语音技术和智谱AI的GLM大语言模型，实现了自然的语音交互能力。
+
+### 最新架构改进（v2.0）
+
+本项目经过重大架构升级，实现了**零延迟丝滑交互**和**完全杜绝回环**的设计目标。
+
+### 具体信息见[finalwork/README.md](finalwork/README.md)
